@@ -1,5 +1,8 @@
 package com.example.eshopping.model.paytm;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class InitiateTransactionResponse {
 
     private Head head;
