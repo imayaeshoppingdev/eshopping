@@ -127,9 +127,9 @@ public class SMSController {
 			  RestTemplate restTemplate = new RestTemplate();
 			  HttpHeaders httpHeaders = new HttpHeaders();
 			  httpHeaders.set("Content-Type", "application/json");
-			  httpHeaders.set("Authorization", "Token a3e76b4efa800da090c3aa95d8dec8a6717ccf9c");
+			  httpHeaders.set("Authorization", "Token 692cbf1b28190da88d064cf3007e5c3ef99b890c");
 			  HttpEntity<String> entity = new HttpEntity<String>(httpHeaders);
-			  String url="https://staging-express.delhivery.com/c/api/pin-codes/json/?filter_codes="+pincode;
+			  String url="https://track.delhivery.com/c/api/pin-codes/json/?filter_codes="+pincode;
 			  response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 			  System.out.println("result "+response.getBody().toString());
 			  
@@ -147,9 +147,9 @@ public class SMSController {
 			  RestTemplate restTemplate = new RestTemplate();
 			  HttpHeaders httpHeaders = new HttpHeaders();
 			  httpHeaders.set("Content-Type", "application/json");
-			  httpHeaders.set("Authorization", "Token a3e76b4efa800da090c3aa95d8dec8a6717ccf9c");
+			  httpHeaders.set("Authorization", "Token 692cbf1b28190da88d064cf3007e5c3ef99b890c");
 			  HttpEntity<String> entity = new HttpEntity<String>(httpHeaders);
-			  String url="https://staging-express.delhivery.com/waybill/api/fetch/json/";
+			  String url="https://track.delhivery.com/waybill/api/fetch/json/";
 			  ResponseEntity<String> result = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 			  System.out.println("result "+result.getBody().toString());
 			  response.setMessage(result.getBody().toString());
@@ -168,12 +168,12 @@ public class SMSController {
 			  RestTemplate restTemplate = new RestTemplate();
 			  HttpHeaders httpHeaders = new HttpHeaders();
 			  httpHeaders.set("Content-Type", "application/json");
-			  httpHeaders.set("Authorization", "Token a3e76b4efa800da090c3aa95d8dec8a6717ccf9c");
+			  httpHeaders.set("Authorization", "Token 692cbf1b28190da88d064cf3007e5c3ef99b890c");
 			  String requestString = JSONUtil.toJson(request);
 			  requestString = "format=json&data=".concat(requestString);
 			  System.out.println(requestString);
 			  HttpEntity<String> entity = new HttpEntity<String>(requestString,httpHeaders);
-			  String url="https://staging-express.delhivery.com/api/cmu/create.json";
+			  String url="https://track.delhivery.com/api/cmu/create.json";
 			  response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
 			  System.out.println("result "+response.getBody().toString());
 			  
@@ -191,12 +191,12 @@ public class SMSController {
 			  RestTemplate restTemplate = new RestTemplate();
 			  HttpHeaders httpHeaders = new HttpHeaders();
 			  httpHeaders.set("Content-Type", "application/json");
-			  httpHeaders.set("Authorization", "Token a3e76b4efa800da090c3aa95d8dec8a6717ccf9c");
+			  httpHeaders.set("Authorization", "Token 692cbf1b28190da88d064cf3007e5c3ef99b890c");
 			  String requestString = JSONUtil.toJson(request);
 			  requestString = "format=json&data=".concat(requestString);
 			  System.out.println(requestString);
 			  HttpEntity<String> entity = new HttpEntity<String>(requestString,httpHeaders);
-			  String url="https://staging-express.delhivery.com/api/cmu/create.json";
+			  String url="https://track.delhivery.com/api/cmu/create.json";
 			  response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
 			  System.out.println("result "+response.getBody().toString());
 			  
@@ -236,11 +236,11 @@ public class SMSController {
 			  RestTemplate restTemplate = new RestTemplate();
 			  HttpHeaders httpHeaders = new HttpHeaders();
 			  httpHeaders.set("Content-Type", "application/json");
-			  httpHeaders.set("Authorization", "Token a3e76b4efa800da090c3aa95d8dec8a6717ccf9c");
+			  httpHeaders.set("Authorization", "Token 692cbf1b28190da88d064cf3007e5c3ef99b890c");
 			  httpHeaders.set("Accept", "application/json");
 			  HttpEntity<WareHouse> entity = new HttpEntity<WareHouse>(request,httpHeaders);
 			  System.out.println(JSONUtil.toJson(entity));
-			  String url="https://staging-express.delhivery.com/api/backend/clientwarehouse/create/";
+			  String url="https://track.delhivery.com/api/backend/clientwarehouse/create/";
 			  result = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
 			  System.out.println("result "+result.getBody().toString());
 			  response.setResult(result);
@@ -260,9 +260,9 @@ public class SMSController {
 			  RestTemplate restTemplate = new RestTemplate();
 			  HttpHeaders httpHeaders = new HttpHeaders();
 			  httpHeaders.set("Content-Type", "application/json");
-			  httpHeaders.set("Authorization", "Token a3e76b4efa800da090c3aa95d8dec8a6717ccf9c");
+			  httpHeaders.set("Authorization", "Token 692cbf1b28190da88d064cf3007e5c3ef99b890c");
 			  HttpEntity<String> entity = new HttpEntity<String>(httpHeaders);
-			  String url="https://staging-express.delhivery.com/api/v1/packages/json/?waybill="+id+"&token=a3e76b4efa800da090c3aa95d8dec8a6717ccf9c";
+			  String url="https://track.delhivery.com/api/v1/packages/json/?waybill="+id+"&token=692cbf1b28190da88d064cf3007e5c3ef99b890c";
 			  response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 			  System.out.println("result "+response.getBody().toString());
 			  
@@ -280,9 +280,9 @@ public class SMSController {
 			  RestTemplate restTemplate = new RestTemplate();
 			  HttpHeaders httpHeaders = new HttpHeaders();
 			  httpHeaders.set("Content-Type", "application/json");
-			  httpHeaders.set("Authorization", "Token a3e76b4efa800da090c3aa95d8dec8a6717ccf9c");
+			  httpHeaders.set("Authorization", "Token 692cbf1b28190da88d064cf3007e5c3ef99b890c");
 			  HttpEntity<CancelOrder> entity = new HttpEntity<CancelOrder>(request,httpHeaders);
-			  String url="https://staging-express.delhivery.com/api/p/edit";
+			  String url="https://track.delhivery.com/api/p/edit";
 			  result = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
 			  System.out.println("result "+result.getBody().toString());
 //			  response.setMessage(result.getBody().toString());
@@ -302,9 +302,9 @@ public class SMSController {
 			  RestTemplate restTemplate = new RestTemplate();
 			  HttpHeaders httpHeaders = new HttpHeaders();
 			  httpHeaders.set("Content-Type", "application/json");
-			  httpHeaders.set("Authorization", "Token a3e76b4efa800da090c3aa95d8dec8a6717ccf9c");
+			  httpHeaders.set("Authorization", "Token 692cbf1b28190da88d064cf3007e5c3ef99b890c");
 			  HttpEntity<UpdateWarehouse> entity = new HttpEntity<UpdateWarehouse>(request,httpHeaders);
-			  String url="https://staging-express.delhivery.com/api/backend/clientwarehouse/edit/";
+			  String url="https://track.delhivery.com/api/backend/clientwarehouse/edit/";
 			  result = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
 			  System.out.println("result "+result.getBody().toString());
 			  response.setResult(result);
@@ -324,9 +324,9 @@ public class SMSController {
 			  RestTemplate restTemplate = new RestTemplate();
 			  HttpHeaders httpHeaders = new HttpHeaders();
 			  httpHeaders.set("Content-Type", "application/json");
-			  httpHeaders.set("Authorization", "Token a3e76b4efa800da090c3aa95d8dec8a6717ccf9c");
+			  httpHeaders.set("Authorization", "Token 692cbf1b28190da88d064cf3007e5c3ef99b890c");
 			  HttpEntity<String> entity = new HttpEntity<String>(httpHeaders);
-			  String url="https://staging-express.delhivery.com/api/p/packing_slip?wbns="+id;
+			  String url="https://track.delhivery.com/api/p/packing_slip?wbns="+id;
 			  response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 			  System.out.println("result "+response.getBody().toString());
 			  

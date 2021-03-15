@@ -94,7 +94,7 @@ public class PaytmClientImpl implements PaytmClient {
         JSONObject body = new JSONObject();
         body.put("requestType", "Payment");
         body.put("mid", merchantId);
-        body.put("websiteName", "WEBSTAGING");
+        body.put("websiteName", "DEFAULT");
         body.put("orderId", paytmInitiateTransactionRequest.getOrderId());
         body.put("callbackUrl", "https://www.imaya.co.in/ViewCartPage");
 
