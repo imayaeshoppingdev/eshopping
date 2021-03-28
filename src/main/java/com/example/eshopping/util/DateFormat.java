@@ -34,7 +34,7 @@ public class DateFormat {
 			//sdf.setTimeZone(tz);
 			t = new Date(sdf.parse(argDate).getTime());
 
-		} catch (java.text.ParseException pe) {
+		} catch (ParseException pe) {
 			//logger_.debug("ParseException encountered in stringToTimestamp. String = " + argDate + ", Msg = " + pe.getMessage());
 		}
 		return t;
@@ -81,7 +81,7 @@ public class DateFormat {
 			e.printStackTrace();
 		}
 		
-		String dbURI = "mongodb://eshopping:springBootReact@18.224.18.89:27017/eshopping";
+//		String dbURI = "mongodb://eshopping:springBootReact@18.224.18.89:27017/eshopping";
 //		MongoClient mongoClient = new MongoClient(new MongoClientURI(dbURI));
 //		List<String> databases = mongoClient.getDatabaseNames();
 //        
@@ -98,6 +98,13 @@ public class DateFormat {
 //         
 //        mongoClient.close();
 
-	}
+		
+	
+	
+	
+	
+	
+	
+}
 
 }

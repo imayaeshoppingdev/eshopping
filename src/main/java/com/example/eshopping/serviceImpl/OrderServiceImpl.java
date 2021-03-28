@@ -158,6 +158,7 @@ public class OrderServiceImpl implements OrderService{
 			orderMasterRepository.save(master);
 		}
 		System.out.println("date  "+new Date());
+		response.setOrder(order);
 		return  response;
 	}
 	
@@ -187,5 +188,9 @@ public class OrderServiceImpl implements OrderService{
 	
 	public Order saveOrderDirectly(Order order) {
 		return orderRepository.save(order);
+	}
+	
+	public OrderMaster saveOrderMaster(OrderMaster order) {
+		return orderMasterRepository.save(order);
 	}
 }

@@ -42,6 +42,7 @@ public class Cart {
 	private String size;
 	private String handlingFee;
 	private String deliveryPartner;
+	private String displayLocation;
 	
 	public String getId() {
 		return id;
@@ -192,6 +193,12 @@ public class Cart {
 	}
 	public void setDeliveryPartner(String deliveryPartner) {
 		this.deliveryPartner = deliveryPartner;
+	}
+	public String getDisplayLocation() {
+		return displayLocation;
+	}
+	public void setDisplayLocation(String displayLocation) {
+		this.displayLocation = displayLocation;
 	}
 	
 	

@@ -71,6 +71,7 @@ public class CartController {
 				cart.setSize(request.getSize());
 				cart.setHandlingFee(request.getHandlingFee());
 				cart.setDeliveryPartner(request.getDeliveryPartner());
+				cart.setDisplayLocation(product.getDisplayLocation());
 			}			
 			
 			cartService.saveCart(cart);

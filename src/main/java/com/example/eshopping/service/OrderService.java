@@ -24,4 +24,6 @@ public interface OrderService {
 	public List<OrderMaster> getOrderBySellerIdAndStatus(String sellerId, String status);
 	
 	public Order saveOrderDirectly(Order order);
+	
+	public OrderMaster saveOrderMaster(OrderMaster order);
 }

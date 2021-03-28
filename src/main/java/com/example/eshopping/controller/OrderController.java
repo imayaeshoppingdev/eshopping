@@ -207,7 +207,12 @@ public class OrderController {
 		try {
 			Order order  = orderService.getOrderById(request.getId());
 			order.setOrderStatus(request.getOrderStatus());
-			orderService.saveOrderDirectly(order);			
+			orderService.saveOrderDirectly(order);	
+			List<OrderMaster> orderMaster = orderService.getOrderMasterByOrderId(request.getId());
+			for(OrderMaster orderStatusUpdate : orderMaster) {
+				orderStatusUpdate.setStatus(request.getOrderStatus());
+				orderService.saveOrderMaster(orderStatusUpdate);
+			}
 		}
 		catch(Exception e) {
 			System.out.println(e);
